@@ -60,7 +60,7 @@ abline(v = mean(per_day$tot_steps), col = "red", lwd = 3)
 legend("topright", legend = c("mean"), col = c("red"), pch = "-", lwd = 3)
 ```
 
-![](PA1_template_files/figure-html/histogrma total steps per day with mean and median-1.png)<!-- -->
+![](PA1_template_files/figure-html/histogrma_total_steps_per_day_with_mean_and_median-1.png)<!-- -->
 
 ### 3. Calculate and report the mean and median of the total number of steps taken per day
 Draw total number of steps per day with mean and median
@@ -72,7 +72,7 @@ abline(h=median(per_day$tot_steps, na.rm = T), col="blue", lwd = 3)
 legend("topright", legend = c("mean", "median"), col = c("red", "blue"), pch = "-", lwd = 3)
 ```
 
-![](PA1_template_files/figure-html/barplot total steps per day with mean and median-1.png)<!-- -->
+![](PA1_template_files/figure-html/barplot_total_steps_per_day_with_mean_and_median-1.png)<!-- -->
 
 ## What is the average daily activity pattern?
 ### 1. Make a time series plot (i.e. \color{red}{\verb|type = "l"|}type="l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
@@ -84,7 +84,7 @@ plot(per_interval$interval, per_interval$avg_steps, type = "l",
      main = "Average daily activity ", xlab = "5 min intervals", ylab = "Average steps accross all days")
 ```
 
-![](PA1_template_files/figure-html/prepare time intervals-1.png)<!-- -->
+![](PA1_template_files/figure-html/prepare_time_intervals-1.png)<!-- -->
 
 ### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -136,7 +136,7 @@ abline(v = mean(adjusted_per_day$tot_steps), col = "red", lwd = 3)
 legend("topright", legend = c("mean"), col = c("red"), pch = "-", lwd = 3)
 ```
 
-![](PA1_template_files/figure-html/plot new hist and mean/median per day-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot_new_hist_and_mean_median_per_day-1.png)<!-- -->
 
 ```r
 summary(adjusted_per_day$tot_steps)
@@ -154,7 +154,7 @@ abline(h=median(adjusted_per_day$tot_steps, na.rm = T), col="blue", lwd = 3)
 legend("topright", legend = c("mean", "median"), col = c("red", "blue"), pch = "-", lwd = 3)
 ```
 
-![](PA1_template_files/figure-html/plot new hist and mean/median per day-2.png)<!-- -->
+![](PA1_template_files/figure-html/plot_new_hist_and_mean_median_per_day-2.png)<!-- -->
 
 In comapison with original dataset the adjusted data looks more normal distributed.
 
@@ -177,4 +177,4 @@ library(ggplot2)
 qplot(interval, avg_steps, data = weekday_steps, geom = "line", facets=wday~.)
 ```
 
-![](PA1_template_files/figure-html/panel plot-1.png)<!-- -->
+![](PA1_template_files/figure-html/panel_plot-1.png)<!-- -->
